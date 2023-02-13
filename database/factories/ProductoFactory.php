@@ -17,7 +17,10 @@ class ProductoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre' => fake()->word(),
+            'descripcion' => fake()->text(50),
+            'stock' => fake()->numberBetween(0, 200),
+            'precio' => fake()->randomFloat(2, 2, 9.99)
         ];
     }
 }
