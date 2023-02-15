@@ -9,14 +9,21 @@ class ProductoController extends Controller
 {
     public function allProducts()
     {
-        dd(Producto::all());
+        $productos = Producto::all();
+        return view('products',);
     }
     public function newProductForm()
     {
         return view('newProductForm');
     }
-    public function newProduct()
+    public function newProduct(Request $req)
     {
-        echo "esto es un nuevo producto";
+        $producto = new Producto;
+
+        $producto->nombre = $req->input('nombre');
+        $producto->nombre = $req->input('nombre');
+        $producto->nombre = $req->input('nombre');
+        $producto->nombre = $req->input('nombre');
+        $producto->nombre = $req->input('nombre');
     }
 }
