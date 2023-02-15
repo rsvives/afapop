@@ -10,8 +10,10 @@ class ProductoController extends Controller
     public function allProducts()
     {
         $productos = Producto::all();
-        return view('products',);
+        return view('products', ["misProductos" => $productos]);
     }
+
+
     public function newProductForm()
     {
         return view('newProductForm');
@@ -21,9 +23,13 @@ class ProductoController extends Controller
         $producto = new Producto;
 
         $producto->nombre = $req->input('nombre');
-        $producto->nombre = $req->input('nombre');
-        $producto->nombre = $req->input('nombre');
-        $producto->nombre = $req->input('nombre');
-        $producto->nombre = $req->input('nombre');
+        $producto->descripcion = $req->input('descripcion');
+        $producto->stock = $req->input('stock');
+        $producto->precio = $req->input('precio');
+
+        $producto->save();
+
+        $productos = Producto::all();
+        return view('products', ["misProductos" => $productos]);
     }
 }

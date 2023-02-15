@@ -9,10 +9,10 @@
 <body>
     <form action="{{route('insertProduct')}}" method="post">
         @csrf
-        <input type="text" name="nombre">
-        <input type="number" name="precio">
-        <input type="text" name="descripcion">
-        <input type="number" name="stock">
+        <input type="text" name="nombre" placeholder="nombre" >
+        <input type="number" name="precio" placeholder="precio">
+        <input type="text" name="descripcion" placeholder="descripcion">
+        <input type="number" name="stock" placeholder="stock">
         <input type="submit" value="nuevo producto">
     </form>
 </body>
