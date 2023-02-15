@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
     {
 
         Producto::factory(10)->create();
+
+        //esto es una prueba
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

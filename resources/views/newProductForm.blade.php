@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="sfdgdhsyk" method="post">
+    <form action="{{route('insertProduct')}}" method="post">
         @csrf
         <input type="text" name="nombre">
         <input type="number" name="precio">
